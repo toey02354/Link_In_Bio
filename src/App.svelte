@@ -1,45 +1,39 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+  import Key from './components/Key.svelte'
+
+  let firstRow = ['Q','W','E','R','T','Y', 'U', 'I', 'O', 'P', '[', ']']
+
+  let handleKeyPressDown = (event: KeyboardEvent) => {
+    console.log('key down',event.key);
+  }
+  let handleKeyPressUp = (event: KeyboardEvent) => {
+    console.log('key up',event.key);
+  }
+
+  addEventListener('keydown', handleKeyPressDown)
+  addEventListener('keyup', handleKeyPressUp)
+
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+<div>
+  <div class="wrapper">
+    <div class="keeb-row">
+      {#each firstRow as key}
+        <Key theKey={key}></Key>
+      {/each}
+    </div>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+</div>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .keeb-row{
+    display: flex;
+    gap: 8px
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
+  
 </style>
