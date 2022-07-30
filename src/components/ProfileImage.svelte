@@ -7,8 +7,8 @@
 
 <style>
     img{
-        /* width: 100vw; */
-        object-fit: cover;
+        /* object-fit: cover; */
         height: 50vh;
+        /* width: 100vw; */
     }
 </style>
