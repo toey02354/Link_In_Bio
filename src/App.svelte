@@ -1,39 +1,40 @@
 <script lang="ts">
-  import Key from './components/Key.svelte'
-
-  let firstRow = ['Q','W','E','R','T','Y', 'U', 'I', 'O', 'P', '[', ']']
-
-  let handleKeyPressDown = (event: KeyboardEvent) => {
-    console.log('key down',event.key);
-  }
-  let handleKeyPressUp = (event: KeyboardEvent) => {
-    console.log('key up',event.key);
-  }
-
-  addEventListener('keydown', handleKeyPressDown)
-  addEventListener('keyup', handleKeyPressUp)
-
+  let profilePic = 'images/profile.JPG'
+  import ProfileImage from "./components/ProfileImage.svelte";
+  import Title from "./components/Title.svelte";
+  import Links from "./components/Links.svelte";
 </script>
 
-<div>
-  <div class="wrapper">
-    <div class="keeb-row">
-      {#each firstRow as key}
-        <Key theKey={key}></Key>
-      {/each}
-    </div>
+<div class="container">
+  <!-- svelte-ignore a11y-img-redundant-alt -->
+  <ProfileImage src={profilePic}/>
+  <Title title="Natthaphol Uthumphirat"/>
+  <div class="links-container">
+    <Links link="https://www.facebook.com" linkName="Facebook"/>
+    <Links link="https://www.instagram.com" linkName="Instagram"/>
+    <Links link="https://toey-portfolio.vercel.app" linkName="Portfolio"/>
+    <Links link="https://www.linkedin.com/in/natthaphol-uthumphirat" linkName="LinkedIn"/>
   </div>
 </div>
 
 <style>
-  .wrapper{
+  .container{
+    /* background-color: rgba(255,0,0,0.2); */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 425px;
+    max-height: 100vh;
+    align-items: center;
+    /* justify-content: center; */
   }
-  .keeb-row{
+
+  .links-container{
+    width: 100%;
     display: flex;
-    gap: 8px
+    flex-direction: column;
+    gap: 12px;
   }
   
 </style>
