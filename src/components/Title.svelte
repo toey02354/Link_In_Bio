@@ -2,12 +2,14 @@
     export let title
 </script>
 
-<h1>{title}</h1>
+<div class="title">{title}</div>
 
 <style>
-    h1{
+    .title{
+        /* color: #324B4A; */
         margin: 1rem 0;
+        padding: 0.4em 0.5rem;
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 600;
     }
 </style>
