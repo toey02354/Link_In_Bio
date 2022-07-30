@@ -16,11 +16,12 @@
         font-weight: 600;
         position: absolute;
         top: 10%;
-        left: 24%;
+        left: 20%;
         z-index: 99;
         color: white;
         background: #324b4a50;
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         border-radius: 1rem;
         transform: skewY(-3deg);
         transition: all 0.2s ease-in-out;

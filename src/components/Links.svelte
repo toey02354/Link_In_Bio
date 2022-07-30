@@ -23,6 +23,7 @@
         letter-spacing: 0.12em;
         transition: all 0.12s ease-in ;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.22);
     }
 
