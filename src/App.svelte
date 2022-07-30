@@ -26,6 +26,7 @@
     height: 100vh;
     align-items: center;
     /* justify-content: center; */
+    padding-bottom: 2rem;
     overflow-x: hidden;
   }
 
