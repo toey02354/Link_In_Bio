@@ -31,7 +31,5 @@
         background-color: #956E5E;
         /* transform: scale(100%); */
         color: #95B1AF;
-        outline: #95B1AF solid 4px;
-        -webkit-outline: #95B1AF solid 4px;
     }
 </style>
