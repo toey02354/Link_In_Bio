@@ -2,14 +2,30 @@
     export let title
 </script>
 
-<div class="title">{title}</div>
+<p class="title">
+    {@html title}
+</p>
 
 <style>
     .title{
-        /* color: #324B4A; */
+        cursor: pointer;
         margin: 1rem 0;
-        padding: 0.4em 0.5rem;
-        font-size: 2rem;
+        padding: 0.75rem 3rem;
+        font-size: 3rem;
+        line-height: 3.3rem;
         font-weight: 600;
+        position: absolute;
+        top: 10%;
+        left: 24%;
+        z-index: 99;
+        color: white;
+        background: #324b4a50;
+        backdrop-filter: blur(5px);
+        border-radius: 1rem;
+        transform: skewY(-3deg);
+        transition: all 0.2s ease-in-out;
+    }
+    .title:hover{
+        transform: skewY(3deg);
     }
 </style>

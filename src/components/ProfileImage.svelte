@@ -9,6 +9,5 @@
     img{
         /* object-fit: cover; */
         height: 50vh;
-        /* width: 100vw; */
     }
 </style>

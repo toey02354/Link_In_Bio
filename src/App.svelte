@@ -1,20 +1,31 @@
 <script lang="ts">
   let profilePic = 'images/profile.JPG'
+  let facebookLogo = 'images/facebook.svg'
+  let githubLogo = 'images/github.svg'
+  let linkedInLogo = 'images/linkedin.svg'
+  let wwwLogo = 'images/www.svg'
+
   import ProfileImage from "./components/ProfileImage.svelte";
   import Title from "./components/Title.svelte";
   import Links from "./components/Links.svelte";
+
+  let title = `Natthaphol <br/>Uthumphirat`
 </script>
 
 <div class="container">
   <!-- svelte-ignore a11y-img-redundant-alt -->
-  <div class="centerdiv top"><ProfileImage src={profilePic}/></div>
-  <div class="centerdiv bottom"><Title title="Natthaphol Uthumphirat"/>
+  <div class="top">
+    <ProfileImage src={profilePic}/>
+    <Title {title} />
+  </div>
+  <div class="bottom">
     <div class="links-container">
-      <Links link="https://www.facebook.com" linkName="Facebook"/>
-      <Links link="https://www.instagram.com" linkName="Instagram"/>
-      <Links link="https://toey-portfolio.vercel.app" linkName="Portfolio"/>
-      <Links link="https://www.linkedin.com/in/natthaphol-uthumphirat" linkName="LinkedIn"/>
-    </div></div>
+      <Links logoSrc={facebookLogo} link="https://www.facebook.com/dekaiser02354" linkName="Facebook"/>
+      <Links logoSrc={githubLogo} link="https://github.com/toey02354" linkName="Github"/>
+      <Links logoSrc={wwwLogo} link="https://toey-portfolio.vercel.app" linkName="Portfolio"/>
+      <Links logoSrc={linkedInLogo} link="https://www.linkedin.com/in/natthaphol-uthumphirat" linkName="LinkedIn"/>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -26,16 +37,17 @@
     height: 100vh;
     align-items: center;
     /* justify-content: center; */
-    padding-bottom: 2rem;
     overflow-x: hidden;
   }
 
   .top{
     height: 50vh;
+    position: relative;
   }
   .bottom{
     height: 50vh;
-    max-width: 425px;
+    width: 90vw;
+    min-width: 400px;
   }
 
   .links-container{
@@ -44,6 +56,7 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin: 2rem auto;
   }
   
 </style>
