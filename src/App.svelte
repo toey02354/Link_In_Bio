@@ -24,9 +24,9 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    max-width: 425px;
     align-items: center;
     /* justify-content: center; */
+    overflow-x: hidden;
   }
 
   .top{
@@ -34,6 +34,7 @@
   }
   .bottom{
     height: 50vh;
+    max-width: 425px;
   }
 
   .links-container{

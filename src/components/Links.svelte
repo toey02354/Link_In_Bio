@@ -12,7 +12,7 @@
         cursor: pointer;
         display: flex;
         gap: 4px;
-        background: #95B1AF;
+        background: #95b1af70;
         width: 100%;
         justify-content: center;
         margin: 0 1em;
@@ -21,7 +21,9 @@
         font-size: 1.25rem;
         font-weight: 600;
         letter-spacing: 0.12em;
-        transition: all 0.15s ease-in ;
+        transition: all 0.12s ease-in ;
+        /* backdrop-filter: blur(15px); */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.22);
         /* color: ; */
     }
 
@@ -30,6 +32,6 @@
         /* transform: scale(100%); */
         color: #95B1AF;
         outline: #95B1AF solid 4px;
-
+        -webkit-outline: #95B1AF solid 4px;
     }
 </style>
