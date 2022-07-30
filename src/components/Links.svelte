@@ -16,6 +16,7 @@
         gap: 8px;
         background: #95b1af70;
         width: 100%;
+        max-width: 425px;
         margin: 0 1em;
         border-radius: 1.5rem;
         font-size: 1.25rem;
