@@ -43,6 +43,8 @@
   .top{
     height: 50vh;
     position: relative;
+    display: flex;
+    justify-content: center;
   }
   .bottom{
     height: 50vh;
